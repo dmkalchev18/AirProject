@@ -1,6 +1,6 @@
 
 
-initScenes(){
+function initScenes(){
 
    // build scene
    new ScrollMagic.Scene({
