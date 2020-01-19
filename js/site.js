@@ -1,12 +1,22 @@
-var isScrollSnapSupported = 'scrollSnapType' in document.documentElement.style ||
-        'webkitScrollSnapType' in document.documentElement.style;
 
-if (!isScrollSnapSupported) {
-  var elem = document.createElement('p'),
-      txt  = document.createTextNode('Your browser does not support CSS Scroll Snap Points :( '),
-      local = document.body;
-  
-  elem.appendChild(txt);
-  elem.classList.add('warning');
-  local.insertBefore(elem, local.firstChild);
-}
+
+
+$(function () {
+
+  let paraTemp = $("#vTemp");
+
+  //paraTemp.text("Hello Jelyazko!");
+
+  $.getJSON("http://data.sensor.community/airrohr/v1/sensor/38303/", function (data) {
+    console.log(data);
+
+    let temp1 = parseFloat(data[0].sensordatavalues[0].value);
+    let temp2 = parseFloat(data[1].sensordatavalues[0].value);
+    let temp = (temp1 + temp2) / 2;
+    console.log(temp.toFixed(2));
+    paraTemp.text(temp.toFixed(2));
+  });
+
+
+
+});
