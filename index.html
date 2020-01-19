@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/site.css">
 
-    <script type='text/javascript'
-        src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js'></script>
 
     <script type="text/javascript" src="js/site.js"></script>
 </head>
@@ -25,8 +25,12 @@
         </div>
         <div class="InfoButton1" class="button_cont" align="center">
             <a class="InfoButton" target="_blank" rel="nofollow">
-                <span>Add Call To Action</a>
-                </div>
+                <span>More Information</a></div>
+    </div>
+       <div class="StatButton" class="button_cont" align="center">
+              <a class="StatButton" target="_blank" rel="nofollow">
+                 <span>Stats Button</a>
+                 </div>
     </div>
 
 
@@ -40,9 +44,7 @@
         <div class="spacer s2"></div>
         <div id="trigger1" class="spacer s0"></div>
         <div id="reveal1" class="box2 blue">
-            <p>welcome to our website about AirQuality!!!</p>
-            <a href="#" class="viewsource">view source</a>
-			
+            <p>Welcome to our website about AirQuality!!!</p>
         </div>
         <div class="spacer s2"></div>
         <script>
@@ -55,15 +57,28 @@
             })
                 .setClassToggle("#reveal1", "visible") // add class to reveal
                 .addTo(controller);
+                
+        </script>
+        <!-- /****************************************/ -->
+
+        <div class="spacer s2"></div>
+        <div id="trigger2" class="spacer s0"></div>
+        <div id="reveal2" class="box2 blue">
+            <p>tes tes tes</p>
+        </div>
+        <div class="spacer s2"></div>
+        <script>
+            // build scene
+            new ScrollMagic.Scene({
+                triggerElement: "#trigger2",
+                triggerHook: 0.9, // show, when scrolled 10% into view
+                duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
+                offset: 50 // move trigger to center of element
+            })
+                .setClassToggle("#reveal2", "visible") // add class to reveal
+                .addTo(controller);
         </script>
     </div>
-	<div class="hold">
-        <div id="element-1" class="element element-1"></div>
-        <div id="element-2" class="element element-2"></div>
-        <div id="element-3" class="element element-3"></div>
-        <div id="element-4" class="element element-4"></div>
-        <div id="element-5" class="element element-5"></div>
-      </div>
+    
 </body>
-
 </html>
