@@ -38,6 +38,7 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 50px;
   }
   
   @media only screen and (max-device-width: 1400px) {
@@ -45,3 +46,38 @@ body, html {
       background-attachment: scroll;
     }
   }
+.SiteLogo{
+  /* margin-top: -15px;
+  font-size: 12px;
+  margin: 0;
+  font-family: "Ink Free";
+  border-style: solid;
+  margin-left: 25%;
+  margin-right: 25%;
+  
+  text-align: center;
+  width: 50%;
+  height: 155px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%); */
+
+  font-size: 700%;
+  font-family: Ink Free;
+  border-style: solid;
+  margin-left: 29%;
+  margin-right: 25%;
+  text-align: center;
+  margin-top: 163px;
+  margin-bottom: 25%;
+  width: 41%;
+  position: absolute;
+  top: 18%;
+}
+
+.SiteLogo p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
