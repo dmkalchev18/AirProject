@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TechBears</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/site.css">
+
+    <script type='text/javascript'
+        src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js'></script>
+
+    <script type="text/javascript" src="js/site.js"></script>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="SiteLogo">
+            <p>Tech Bears</p>
+        </div>
+        <div class="InfoButton1" class="button_cont" align="center">
+            <a class="InfoButton" target="_blank" rel="nofollow">
+                <span>Add Call To Action</a>
+                </div>
+    </div>
+
+
+    <div style="height:1000px;background-color:white;font-size:36px">
+        Hello World
+        <script>
+            // init controller
+            var controller = new ScrollMagic.Controller();
+        </script>
+
+        <div class="spacer s2"></div>
+        <div id="trigger1" class="spacer s0"></div>
+        <div id="reveal1" class="box2 blue">
+            <p>welcome to our website about AirQuality!!!</p>
+            <a href="#" class="viewsource">view source</a>
+        </div>
+        <div class="spacer s2"></div>
+        <script>
+            // build scene
+            new ScrollMagic.Scene({
+                triggerElement: "#trigger1",
+                triggerHook: 0.9, // show, when scrolled 10% into view
+                duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
+                offset: 50 // move trigger to center of element
+            })
+                .setClassToggle("#reveal1", "visible") // add class to reveal
+                .addTo(controller);
+        </script>
+    </div>
+
+
+
+</body>
+
+</html>
