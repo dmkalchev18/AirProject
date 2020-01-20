@@ -5,8 +5,8 @@ function initScenes() {
   // build scene
   new ScrollMagic.Scene({
     triggerElement: "#trigger1",
-    triggerHook: 0.9, // show, when scrolled 10% into view
-    duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
+    triggerHook: 1, // show, when scrolled 10% into view
+    duration: "118%", // hide 10% before exiting view (80% + 10% from bottom)
     offset: 50 // move trigger to center of element
   })
     .setClassToggle("#reveal1", "visible") // add class to reveal
@@ -15,8 +15,8 @@ function initScenes() {
   // build scene
   new ScrollMagic.Scene({
     triggerElement: "#trigger2",
-    triggerHook: 0.9, // show, when scrolled 10% into view
-    duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
+    triggerHook: 1, // show, when scrolled 10% into view
+    duration: "118%", // hide 10% before exiting view (80% + 10% from bottom)
     offset: 50 // move trigger to center of element
   })
     .setClassToggle("#reveal2", "visible") // add class to reveal
@@ -31,7 +31,7 @@ $(function () {
   let paraTemp = $("#vTemp");
   let paraPressure = $("#vPressure");
   let paraHum = $("#vHum");
-
+  let paraPM11 = $('#vPM10');
 
   $.getJSON("http://data.sensor.community/airrohr/v1/sensor/38303/", function (data) {
 
@@ -55,6 +55,20 @@ $(function () {
     console.log(hum1.toFixed(2));
     paraHum.text(hum1.toFixed(2));
 
-  }); 
+  });
+
+  // $.getJSON("http://data.sensor.community/airrohr/v1/sensor/38302/", function (data) {
+
+  //   console.log(data);
+
+  //   let PM11 = parseFloat(data[0].sensordatavalues[0].value);
+  //   let PM12 = parseFloat(data[0].sensordatavalues[1].value);
+  //   let PM13 = parseFloat(data[1].sensordatavalues[0].value);
+  //   let PM14 = parseFloat(data[1].sensordatavalues[1].value);
+  //   let PM10 = (PM11 + PM12+ PM13 + PM14) / 4;
+  //   console.log(PM10.toFixed(2));
+  //   paraPM11.text(PM10.toFixed(2));
+
+  // });
 
 });
