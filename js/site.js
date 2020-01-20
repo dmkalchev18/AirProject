@@ -57,18 +57,19 @@ $(function () {
 
   });
 
-  // $.getJSON("http://data.sensor.community/airrohr/v1/sensor/38302/", function (data) {
+  $.getJSON("http://data.sensor.community/airrohr/v1/sensor/38302/", function (data) {
 
-  //   console.log(data);
+    console.log(data);
 
-  //   let PM11 = parseFloat(data[0].sensordatavalues[0].value);
-  //   let PM12 = parseFloat(data[0].sensordatavalues[1].value);
-  //   let PM13 = parseFloat(data[1].sensordatavalues[0].value);
-  //   let PM14 = parseFloat(data[1].sensordatavalues[1].value);
-  //   let PM10 = (PM11 + PM12+ PM13 + PM14) / 4;
-  //   console.log(PM10.toFixed(2));
-  //   paraPM11.text(PM10.toFixed(2));
+    let PM11 = parseFloat(data[0].sensordatavalues[0].value);
+    let PM12 = parseFloat(data[1].sensordatavalues[0].value);
+    let PM10 = (PM11 + PM12) / 2;
+    console.log(PM10.toFixed(2));
+    paraPM11.text(PM10.toFixed(2));
 
-  // });
+  });
 
 });
+
+
+
