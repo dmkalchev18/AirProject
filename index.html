@@ -28,17 +28,17 @@
             </div>
             <div class="actions-buttons">
                 <div class="Buttons" class="button_cont" align="center">
-                    <a class="InfoButton" target="_blank" rel="nofollow">
+                    <a href="#Info" class="InfoButton"  rel="nofollow">
                         <span>More Information</span>
                     </a>
                 </div>
                 <div class="Buttons" class="button_cont" align="center">
-                    <a class="GraphButton" target="_blank" rel="nofollow">
+                    <a href="#Graphs" class="GraphButton"  rel="nofollow">
                         <span>Graphics</span>
                     </a>
                 </div>
                 <div class="Buttons" class="button_cont" align="center">
-                    <a class="StatsButton" target="_blank" rel="nofollow">
+                    <a href="#Stats" class="StatsButton"  rel="nofollow">
                         <span>Statistics</span>
                     </a>
                 </div>
@@ -52,32 +52,39 @@
             // init controller
             var controller = new ScrollMagic.Controller();
         </script>
+        <center>
+            <div class="spacer s2"></div>
+            <div id="trigger1" class="spacer s0"></div>
+            <div id="reveal1" class="box2 blue">
+                <p>Welcome to our website about AirQuality!!!</p>
+            </div>
+            <div class="spacer s2"></div>
 
-        <div class="spacer s2"></div>
-        <div id="trigger1" class="spacer s0"></div>
-        <div id="reveal1" class="box2 blue">
-            <p>Welcome to our website about AirQuality!!!</p>
-        </div>
-        <div class="spacer s2"></div>
+            <!-- /****************************************/ -->
 
-        <!-- /****************************************/ -->
+            <div class="spacer s2"></div>
+            <div id="trigger2" class="spacer s0"></div>
+            <div id="Stats">
+                <div id="reveal2" class="box2 blue">
+                    <p>Currently it is <span id="vTemp">?</span>&#8451;</p>
+                    <p>Currently the pressure is <span id="vPressure">?</span> hPa</p>
+                    <p>Currently the humidity is <span id="vHum">?</span> &percnt;</p>
+                    <p>Currently the PM10 is <span id="vPM10">?</span> µg/m³</p>
 
-        <div class="spacer s2"></div>
-        <div id="trigger2" class="spacer s0"></div>
-        <div id="reveal2" class="box2 blue">
-            <p>Currently it is <span id="vTemp">?</span>&#8451;</p>
-            <p>Currently the pressure is <span id="vPressure">?</span> hPa</p>
-            <p>Currently the humidity is <span id="vHum">?</span> &percnt;</p>
-            <p>Currently the PM10 is <span id="vPM10">?</span> µg/m³</p>
-
-        </div>
-        <div class="spacer s2"></div>
+                </div>
+            </div>
+            <div class="spacer s2"></div>
 
     </div>
-    <center>
-    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-day.png">
-    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-day.png">
-</center>
+    </center>
+    
+    <div id="Graphs">
+        <center>
+            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-day.png">
+            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-day.png">
+        </center>
+    </div>
+
 </body>
 
 </html>
