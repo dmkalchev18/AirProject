@@ -27,7 +27,10 @@ function initScenes() {
 $(function () {
 
   $('a[href*="#"]').on('click', function(e) {
+    // Prevent event bubling (i.e. the browser will not add #element_id in address bar)
     e.preventDefault();
+
+    // Scroll the page to the selected element
     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 100, 'linear');
   });
   
