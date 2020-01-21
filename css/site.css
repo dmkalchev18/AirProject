@@ -144,7 +144,7 @@ opacity: 1;
 right: 0;
 }
 
-a:visited, a:active{
+a:visited, a:active, a:link{
   color:white;
 }
 
