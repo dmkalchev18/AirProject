@@ -16,37 +16,10 @@
         
         <script type="text/javascript" src="js/site.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
-
-<script type = "text/javascript">
-$(document).ready(function(){
-  //Take your div into one js variable
-  var div = $("#divToShowHide");
-  //Take the current position (vertical position from top) of your div in the variable
-  var pos = div.position();
-  //Now when scroll event trigger do following
-  $(window).scroll(function () {
-   var windowpos = $(window).scrollTop();
-   //Now if you scroll more than 100 pixels vertically change the class to AfterScroll
-   // I am taking 100px scroll, you can take whatever you need
-   if (windowpos >= (pos.top - 1500)) {
-     div.addClass("AfterScroll");
-   }
-   //If scroll is less than 100px, remove the class AfterScroll so that your content will be hidden again 
-   else {
-     s.removeClass("AfterScroll");
-   }
-   //Note: If you want the content should be shown always once you scroll and do not want to hide it again when go to top agian, no need to write the else part
- });
-});
-</script>
        
-  
 </head>
 
 <body>
-    
-    
-    
     
     <div id = "divToShowHide" class = "BeforeScroll">
 
@@ -57,7 +30,6 @@ $(document).ready(function(){
         </div>
 
     </div>
-
 
     <div class="background">
         <div class="SiteLogo-wrapper">
@@ -87,6 +59,7 @@ $(document).ready(function(){
             </div>
         </div>
     </div>
+
     <div style="height:500px;background-color:white;font-size:36px">
         <script>
             // init controller
@@ -122,6 +95,10 @@ $(document).ready(function(){
         <center>
             <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-day.png" alt="Daily Graph (PM10)">
             <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-day.png" alt="Daily Graph (PM2.5)">
+            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-week.png" alt="Weekly Graph (PM10)">
+            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-week.png" alt="Weekly Graph (PM2.5)">
+            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-month.png" alt="Monthly Graph (PM10)">
+            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-month.png" alt="Montly Graph (PM2.5)">
         </center>
     </div>
     <script>
