@@ -4,7 +4,7 @@
 
 /* Scroll Animation */
 
-#reveal1, #reveal2 {
+#reveal1, #reveal2, #reveal3 {
   opacity: 0;
   -webkit-transform: scale(0.9);
        -moz-transform: scale(0.9);
@@ -17,7 +17,7 @@
            -o-transition: all 1s ease-in-out;
                   transition: all 1s ease-in-out;
 }
-#reveal1.visible, #reveal2.visible {
+#reveal1.visible, #reveal2.visible, #reveal3.visible {
   opacity: 1;
   -webkit-transform: none;
        -moz-transform: none;
@@ -182,29 +182,3 @@ a:visited, a:active, a:link{
   padding: 16px;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 60px;
-}
-
-/*Use this class when you want your content to be hidden*/
-.BeforeScroll
-{
-  height: 100px; /*Whatever you want*/
-  width: 100%; /*Whatever you want*/
-  display: none;
-}
-
-
-/*Use this class when you want your content to be shown after some scroll*/
-.AfterScroll
-{
-  height: 100px; /*Whatever you want*/
-  width: 100%; /*Whatever you want*/
-  display: block;
-}

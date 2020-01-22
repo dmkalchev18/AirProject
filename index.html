@@ -5,6 +5,7 @@
 
     <title>TechBears</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="css/site.css">
 
     <script type='text/javascript'
@@ -13,23 +14,12 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
-        
-        <script type="text/javascript" src="js/site.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script> 
-       
+
+    <script type="text/javascript" src="js/site.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
 </head>
 
 <body>
-    
-    <div id = "divToShowHide" class = "BeforeScroll">
-
-        <div id="navbar" >
-            <a class="active" href="javascript:void(0)">Home</a>
-            <a href="javascript:void(0)">News</a>
-            <a href="javascript:void(0)">Contact</a>
-        </div>
-
-    </div>
 
     <div class="background">
         <div class="SiteLogo-wrapper">
@@ -41,17 +31,17 @@
             </div>
             <div class="actions-buttons">
                 <div class="Buttons" class="button_cont" align="center">
-                    <a href="#Info" class="InfoButton"  rel="nofollow">
+                    <a href="#Info" class="InfoButton" rel="nofollow">
                         <span>More Information</span>
                     </a>
                 </div>
                 <div class="Buttons" class="button_cont" align="center">
-                    <a href="#Graphs" class="GraphButton"  rel="nofollow">
+                    <a href="#Graphs" class="GraphButton" rel="nofollow">
                         <span>Graphics</span>
                     </a>
                 </div>
                 <div class="Buttons" class="button_cont" align="center">
-                    <a href="#Stats" class="StatsButton"  rel="nofollow">
+                    <a href="#Stats" class="StatsButton" rel="nofollow">
                         <span>Statistics</span>
                     </a>
                 </div>
@@ -59,6 +49,7 @@
             </div>
         </div>
     </div>
+
 
     <div style="height:500px;background-color:white;font-size:36px">
         <script>
@@ -86,35 +77,31 @@
 
                 </div>
             </div>
-            <div class="spacer s2"></div>
 
     </div>
     </center>
-    
+    <div class="spacer s3">
+    <div id="trigger3" class="spacer s0">
+    <div id="reveal3" class="box2 blue">
     <div id="Graphs">
         <center>
-            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-day.png" alt="Daily Graph (PM10)">
-            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-day.png" alt="Daily Graph (PM2.5)">
-            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-week.png" alt="Weekly Graph (PM10)">
-            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-week.png" alt="Weekly Graph (PM2.5)">
-            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-month.png" alt="Monthly Graph (PM10)">
-            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-month.png" alt="Montly Graph (PM2.5)">
+            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-day.png"
+                alt="Daily Graph (PM10)">
+            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-day.png"
+                alt="Daily Graph (PM2.5)">
+            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-week.png"
+                alt="Weekly Graph (PM10)">
+            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-week.png"
+                alt="Weekly Graph (PM2.5)">
+            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-month.png"
+                alt="Monthly Graph (PM10)">
+            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-month.png"
+                alt="Montly Graph (PM2.5)">
         </center>
     </div>
-    <script>
-        window.onscroll = function() {myFunction()};
-        
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-        
-        function myFunction() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        }
-        </script>
+    </div>
+    </div>
+    </div>
 </body>
 
 </html>
