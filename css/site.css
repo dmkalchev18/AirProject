@@ -1,171 +1,187 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 
 /* Scroll Animation */
 
-#reveal1, #reveal2, #reveal3 {
-  opacity: 0;
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  transform: scale(0.9);
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+#reveal1,
+#reveal2,
+#reveal3 {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
-#reveal1.visible, #reveal2.visible, #reveal3.visible {
-  opacity: 1;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-  transform: none;
+#reveal1.visible,
+#reveal2.visible,
+#reveal3.visible {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
 }
+
 
 /* ************************** */
 
-body, html {
-  height: 100%;
-  margin: 0px;
+body,
+html {
+    height: 100%;
+    margin: 0px;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .background {
-  background-image: url('../images/mainbackground.jpg');
-  height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* padding-top: 50px; */
+    background-image: url('../images/mainbackground.jpg');
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* padding-top: 50px; */
 }
 
 @media only screen and (max-device-width: 1400px) {
-  .parallax {
-    background-attachment: scroll;
-  }
+    .parallax {
+        background-attachment: scroll;
+    }
 }
+
 
 /* SiteLogo */
 
 .SiteLogo-wrapper {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .SiteLogo-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .SiteLogo {
-  width: 650px;
-  font-size: 112px;
-  font-family: Ink Free;
-  border-style: solid;
-  text-align: center;
+    width: 650px;
+    font-size: 112px;
+    font-family: Ink Free;
+    border-style: solid;
+    text-align: center;
 }
 
 @media only screen and (max-device-width: 678px) {
-  .SiteLogo {
-    font-size: 60px;
-    width: 300px;
-  }
-  .actions-buttons {
-    flex-direction: column;
-    justify-content: center;
-  }
+    .SiteLogo {
+        font-size: 60px;
+        width: 300px;
+    }
+    .actions-buttons {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .actions-buttons {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .SiteLogo p {
-  margin-block-start: 0em;
-  margin-block-end: 0em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 
 .Buttons {
-  /* height: 100%; */
-  display: inline-block;
-  border-radius: 4px;
-  background: #99cee0;
-  border: none;
-  color: white;
-  text-align: center;
-  font-size: 22px;
-  font-family: Verdana;
-  padding: 20px;
-  transition: all 0.4s;
-  cursor: pointer;
-  margin: 5px;
+    /* height: 100%; */
+    display: inline-block;
+    border-radius: 4px;
+    background: #99cee0;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    font-family: Verdana;
+    padding: 20px;
+    transition: all 0.4s;
+    cursor: pointer;
+    margin: 5px;
 }
 
 .Buttons span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.4s;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
 }
 
 .Buttons span:after {
-  content: '\2193';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+    content: '\2193';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
 }
 
 .Buttons:hover span {
-  padding-right: 25px;
+    padding-right: 25px;
 }
 
 .Buttons:hover span:after {
-  opacity: 1;
-  right: 0;
+    opacity: 1;
+    right: 0;
 }
 
-.dailybutton, .weeklybutton, .monthlybutton {
-  color: #fff;
-  font-family: Verdana;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #99cee0;
-  padding: 13px;
-  margin-right:5px;
-  border-radius: 5px;
-  display: inline-block;
-  border: none;
-  transition: all 0.4s ease 0s;
+.dailybutton,
+.weeklybutton,
+.monthlybutton {
+    color: #fff;
+    font-family: Verdana;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #99cee0;
+    padding: 13px;
+    margin-right: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
 }
 
-.dailybutton:hover, .weeklybutton:hover, .monthlybutton:hover {
-  background: #434343;
-  letter-spacing: 1px;
-  -webkit-box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.57);
-  -moz-box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.57);
-  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
-  transition: all 0.4s ease 0s;
+.dailybutton:hover,
+.weeklybutton:hover,
+.monthlybutton:hover {
+    background: #434343;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.57);
+    box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.4s ease 0s;
 }
 
-a:visited, a:active, a:link {
-  color: white;
+a:visited,
+a:active,
+a:link {
+    color: white;
 }
 
-#GraphsDaily,#GraphsWeekly,#GraphsMonthly{
-  margin-top:10px;
+#GraphsDaily,
+#GraphsWeekly,
+#GraphsMonthly {
+    margin-top: 10px;
 }
