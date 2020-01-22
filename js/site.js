@@ -24,7 +24,7 @@ function initScenes() {
   new ScrollMagic.Scene({
     triggerElement: "#trigger3",
     triggerHook: 1, // show, when scrolled 10% into view
-    duration: "117%", // hide 10% before exiting view (80% + 10% from bottom)
+    duration: "200%", // hide 10% before exiting view (80% + 10% from bottom)
     offset: 50 // move trigger to center of element
   })
     .setClassToggle("#reveal3", "visible") // add class to reveal
@@ -88,4 +88,30 @@ $(function () {
 
 });
 
+function showdaily() {
+  var x = document.getElementById("GraphsDaily");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function showweekly() {
+  var x = document.getElementById("GraphsWeekly");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function showmonthly() {
+  var x = document.getElementById("GraphsMonthly");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 
