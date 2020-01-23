@@ -166,7 +166,7 @@ html {
 .dailybutton:hover,
 .weeklybutton:hover,
 .monthlybutton:hover {
-    background: #434343;
+    background: #1f39ac;
     letter-spacing: 1px;
     -webkit-box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.57);
     -moz-box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.57);
