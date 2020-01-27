@@ -56,14 +56,12 @@
             <div class="spacer s2"></div>
             <div id="trigger1" class="spacer s0"></div>
             <div id="reveal1" class="box2 blue">
-                <p>Welcome to our website about AirQuality!!!</p>
+                <p>Welcome to our website about Air Quality!!!</p>
             </div>
             <div class="spacer s2"></div>
 
             <!-- /**********************************************************************************/ -->
 
-            <div class="spacer s2"></div>
-            <div id="trigger2" class="spacer s0"></div>
             <div id="Stats">
                 <div id="reveal2" class="box2 blue">
                     <p>Currently it is <span id="vTemp">?</span>&#8451;</p>
@@ -83,36 +81,32 @@
                 <button class="weeklybutton" id="buttongraphweek" onclick="showweekly()">Show weekly graphs</button>
                 <button class="monthlybutton" id="buttongraphmonth" onclick="showmonthly()">Show monthly graphs</button>
             </div>
-            <div class="spacer s3">
-                <div id="trigger3" class="spacer s0">
-                    <div id="reveal3" class="box2 blue">
+            <div id="reveal3" class="box2 blue">
 
-                        <!-- /********************************************************************************/ -->
+                <!-- /********************************************************************************/ -->
 
-                        <div id="GraphsDaily" style="display:none">
-                            <p>Daily Graphs:</p>
-                            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-day.png" alt="Daily Graph (PM10)">
-                            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-day.png" alt="Daily Graph (PM2.5)">
-                        </div>
-
-                        <!-- /********************************************************************************/ -->
-
-                        <div id="GraphsWeekly" style="display:none">
-                            <p>Weekly Graphs:</p>
-                            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-week.png" alt="Weekly Graph (PM10)">
-                            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-week.png" alt="Weekly Graph (PM2.5)">
-                        </div>
-
-                        <!-- /********************************************************************************/ -->
-
-                        <div id="GraphsMonthly" style="display:none">
-                            <p>Monthly Graphs:</p>
-                            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-month.png" alt="Monthly Graph (PM10)">
-                            <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-month.png" alt="Montly Graph (PM2.5)">
-                        </div>
-
-                    </div>
+                <div id="GraphsDaily" style="display:none">
+                    <p>Daily Graphs:</p>
+                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-day.png" alt="Daily Graph (PM10)">
+                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-day.png" alt="Daily Graph (PM2.5)">
                 </div>
+
+                <!-- /********************************************************************************/ -->
+
+                <div id="GraphsWeekly" style="display:none">
+                    <p>Weekly Graphs:</p>
+                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-week.png" alt="Weekly Graph (PM10)">
+                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-week.png" alt="Weekly Graph (PM2.5)">
+                </div>
+
+                <!-- /********************************************************************************/ -->
+
+                <div id="GraphsMonthly" style="display:none">
+                    <p>Monthly Graphs:</p>
+                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-month.png" alt="Monthly Graph (PM10)">
+                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-month.png" alt="Montly Graph (PM2.5)">
+                </div>
+
             </div>
         </div>
     </center>
@@ -123,22 +117,21 @@
         <center>
             <p>More Information</p>
         </center>
-        <!-- <button type="button" onclick="infoFunction()">What's the difference between PM2.5 and PM10</button>
-        <div id="pminfo">
-            <ul class="infolist">
-                <li>The “10” and the “2.5” refer to micrometers.</li>
-                <li>PM10 is particles 10 microns and below.</li>
-                <li>PM2.5 is 2.5 microns and below. (That means PM10 includes PM2.5.) </li>
-                <li>Particulate pollution does not include gas pollutants like ozone and NO2.</li>
-            </ul>
-            
-        </div> -->
+        <!-- <button type="button" onclick="infoFunction()"></button>
+        -->
         <div id="accordion">
-            <h3>Section 1</h3>
+            <h3>What's the difference between PM10 and PM2.5</h3>
             <div>
                 <p>
-                    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum
-                    a velit eu ante scelerisque vulputate.
+                    <div id="pminfo">
+                        <ul class="infolist">
+                            <li>The “10” and the “2.5” refer to micrometers.</li>
+                            <li>PM10 is particles 10 microns and below.</li>
+                            <li>PM2.5 is particles 2.5 microns and below. (That means PM10 includes PM2.5.) </li>
+                            <li>Particulate pollution does not include gas pollutants like ozone and NO2.</li>
+                        </ul>
+
+                    </div>
                 </p>
             </div>
             <h3>Section 2</h3>

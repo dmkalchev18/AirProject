@@ -4,7 +4,7 @@ function initScenes() {
     new ScrollMagic.Scene({
             triggerElement: "#trigger1",
             triggerHook: 1, // show, when scrolled 10% into view
-            duration: "117%", // hide 10% before exiting view (80% + 10% from bottom)
+            duration: "117%", // hide 10% before exiting view (n% + 10% from bottom)
             offset: 50 // move trigger to center of element
         })
         .setClassToggle("#reveal1", "visible") // add class to reveal
@@ -14,7 +14,7 @@ function initScenes() {
     new ScrollMagic.Scene({
             triggerElement: "#trigger2",
             triggerHook: 1, // show, when scrolled 10% into view
-            duration: "117%", // hide 10% before exiting view (80% + 10% from bottom)
+            duration: "123%", // hide 10% before exiting view (n% + 10% from bottom)
             offset: 50 // move trigger to center of element
         })
         .setClassToggle("#reveal2", "visible") // add class to reveal
@@ -24,7 +24,7 @@ function initScenes() {
     new ScrollMagic.Scene({
             triggerElement: "#trigger3",
             triggerHook: 1, // show, when scrolled 10% into view
-            duration: "200%", // hide 10% before exiting view (80% + 10% from bottom)
+            duration: "220%", // hide 10% before exiting view (n% + 10% from bottom)
             offset: 50 // move trigger to center of element
         })
         .setClassToggle("#reveal3", "visible") // add class to reveal
@@ -36,7 +36,8 @@ function initScenes() {
 $(function() {
 
     $("#accordion").accordion({
-        active: 0
+        active: false,
+        collapsible: true
     });
 
     $('a[href*="#"]').on('click', function(e) {
