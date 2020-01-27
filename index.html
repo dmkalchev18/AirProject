@@ -7,14 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/site.css">
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js'></script>
-
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
-
     <script type="text/javascript" src="js/site.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -62,7 +60,7 @@
             </div>
             <div class="spacer s2"></div>
 
-            <!-- /****************************************/ -->
+            <!-- /**********************************************************************************/ -->
 
             <div class="spacer s2"></div>
             <div id="trigger2" class="spacer s0"></div>
@@ -72,10 +70,13 @@
                     <p>Currently the pressure is <span id="vPressure">?</span> hPa</p>
                     <p>Currently the humidity is <span id="vHum">?</span> &percnt;</p>
                     <p>Currently the PM10 is <span id="vPM10">?</span> µg/m³</p>
+                    <p>Currently the PM2.5 is <span id="vPM25">?</span> µg/m³</p>
                 </div>
             </div>
-
         </div>
+
+        <!-- /********************************************************************************/ -->
+
         <div id="Graphs">
             <div class="GraphButtons">
                 <button class="dailybutton" id="buttongraphday" onclick="showdaily()">Show daily graphs</button>
@@ -86,17 +87,24 @@
                 <div id="trigger3" class="spacer s0">
                     <div id="reveal3" class="box2 blue">
 
+                        <!-- /********************************************************************************/ -->
 
                         <div id="GraphsDaily" style="display:none">
                             <p>Daily Graphs:</p>
                             <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-day.png" alt="Daily Graph (PM10)">
                             <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-day.png" alt="Daily Graph (PM2.5)">
                         </div>
+
+                        <!-- /********************************************************************************/ -->
+
                         <div id="GraphsWeekly" style="display:none">
                             <p>Weekly Graphs:</p>
                             <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-week.png" alt="Weekly Graph (PM10)">
                             <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-week.png" alt="Weekly Graph (PM2.5)">
                         </div>
+
+                        <!-- /********************************************************************************/ -->
+
                         <div id="GraphsMonthly" style="display:none">
                             <p>Monthly Graphs:</p>
                             <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-month.png" alt="Monthly Graph (PM10)">
@@ -108,7 +116,41 @@
             </div>
         </div>
     </center>
-    
+
+    <!-- /********************************************************************************/ -->
+
+    <div class="moreinfo" id="Info">
+        <center>
+            <p>More Information</p>
+        </center>
+        <!-- <button type="button" onclick="infoFunction()">What's the difference between PM2.5 and PM10</button>
+        <div id="pminfo">
+            <ul class="infolist">
+                <li>The “10” and the “2.5” refer to micrometers.</li>
+                <li>PM10 is particles 10 microns and below.</li>
+                <li>PM2.5 is 2.5 microns and below. (That means PM10 includes PM2.5.) </li>
+                <li>Particulate pollution does not include gas pollutants like ozone and NO2.</li>
+            </ul>
+            
+        </div> -->
+        <div id="accordion">
+            <h3>Section 1</h3>
+            <div>
+                <p>
+                    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum
+                    a velit eu ante scelerisque vulputate.
+                </p>
+            </div>
+            <h3>Section 2</h3>
+            <div>
+                <p>
+                    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum
+                    a velit eu ante scelerisque vulputate.
+                </p>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

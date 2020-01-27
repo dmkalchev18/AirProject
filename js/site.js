@@ -35,6 +35,10 @@ function initScenes() {
 
 $(function() {
 
+    $("#accordion").accordion({
+        active: 0
+    });
+
     $('a[href*="#"]').on('click', function(e) {
         // Prevent event bubling (i.e. the browser will not add #element_id in address bar)
         e.preventDefault();
@@ -49,6 +53,7 @@ $(function() {
     let paraPressure = $("#vPressure");
     let paraHum = $("#vHum");
     let paraPM11 = $('#vPM10');
+    let paraPM25 = $('#vPM25');
 
 
 
@@ -85,6 +90,12 @@ $(function() {
         let PM10 = (PM11 + PM12) / 2;
         console.log(PM10.toFixed(2));
         paraPM11.text(PM10.toFixed(2));
+
+        let PM21 = parseFloat(data[0].sensordatavalues[1].value);
+        let PM22 = parseFloat(data[1].sensordatavalues[1].value);
+        let PM25 = (PM21 + PM22) / 2;
+        console.log(PM25.toFixed(2));
+        paraPM25.text(PM25.toFixed(2));
 
     });
 
@@ -125,4 +136,13 @@ function showmonthly() {
         $("#buttongraphmonth").text("Show monthly graphs");
     }
 
+}
+
+function infoFunction() {
+    var x = document.getElementById("pminfo");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
 }

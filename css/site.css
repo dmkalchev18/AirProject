@@ -117,9 +117,11 @@ html {
     font-size: 22px;
     font-family: Verdana;
     padding: 20px;
+    margin-top: 15px;
+    margin-right: 10px;
     transition: all 0.4s;
     cursor: pointer;
-    margin: 5px;
+    /* margin: 5px; */
 }
 
 .Buttons span {
@@ -184,4 +186,26 @@ a:link {
 #GraphsWeekly,
 #GraphsMonthly {
     margin-top: 10px;
+}
+
+.moreinfo {
+    font-size: 18px;
+    background-color: rgb(226, 237, 248);
+    margin-top: 50px;
+}
+
+ul.infolist li::before {
+    content: "- ";
+}
+
+ul.infolist {
+    list-style-type: none;
+    margin-bottom: 0px;
+    padding-bottom: 12px;
+}
+
+#accordion {
+    padding-bottom: 86px;
+    padding-right: 23%;
+    padding-left: 23%;
 }
