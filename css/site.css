@@ -52,7 +52,6 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* padding-top: 50px; */
 }
 
 @media only screen and (max-device-width: 1400px) {
@@ -85,6 +84,9 @@ html {
     text-align: center;
 }
 
+
+/* Good quality in phone mode for the logo */
+
 @media only screen and (max-device-width: 678px) {
     .SiteLogo {
         font-size: 60px;
@@ -95,6 +97,9 @@ html {
         justify-content: center;
     }
 }
+
+
+/* Logo buttons */
 
 .actions-buttons {
     display: flex;
@@ -107,7 +112,6 @@ html {
 }
 
 .Buttons {
-    /* height: 100%; */
     display: inline-block;
     border-radius: 4px;
     background: #99cee0;
@@ -121,7 +125,6 @@ html {
     margin-right: 10px;
     transition: all 0.4s;
     cursor: pointer;
-    /* margin: 5px; */
 }
 
 .Buttons span {
@@ -148,6 +151,15 @@ html {
     opacity: 1;
     right: 0;
 }
+
+a:visited,
+a:active,
+a:link {
+    color: white;
+}
+
+
+/* Graph buttons */
 
 .dailybutton,
 .weeklybutton,
@@ -176,17 +188,14 @@ html {
     transition: all 0.4s ease 0s;
 }
 
-a:visited,
-a:active,
-a:link {
-    color: white;
-}
-
 #GraphsDaily,
 #GraphsWeekly,
 #GraphsMonthly {
     margin-top: 10px;
 }
+
+
+/* Info box */
 
 .moreinfo {
     font-size: 18px;
@@ -208,4 +217,29 @@ ul.infolist {
     padding-bottom: 86px;
     padding-right: 23%;
     padding-left: 23%;
+}
+
+div#reveal2 p {
+    border-top: 1px solid silver;
+}
+
+div#reveal2 {
+    width: 50%;
+}
+
+.footnote {
+    border-top: 1px solid silver;
+    margin-top: 12px;
+    padding-top: 4px;
+}
+
+.footnote p {
+    margin: 1px;
+    padding: 1px;
+    font-size: 8pt;
+    color: silver;
+}
+
+.infolist li:last-child {
+    font-weight: bold;
 }

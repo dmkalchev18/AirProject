@@ -1,4 +1,4 @@
-function initScenes() {
+function initScenes(controller) {
 
     // build scene
     new ScrollMagic.Scene({
@@ -37,7 +37,8 @@ $(function() {
 
     $("#accordion").accordion({
         active: false,
-        collapsible: true
+        collapsible: true,
+        heightStyle: "content"
     });
 
     $('a[href*="#"]').on('click', function(e) {
@@ -48,7 +49,8 @@ $(function() {
         $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 100, 'linear');
     });
 
-    initScenes();
+    let controller = new ScrollMagic.Controller();
+    initScenes(controller);
 
     let paraTemp = $("#vTemp");
     let paraPressure = $("#vPressure");
@@ -60,25 +62,27 @@ $(function() {
 
     $.getJSON("http://data.sensor.community/airrohr/v1/sensor/38303/", function(data) {
 
-        console.log(data);
+        let temperature = 0;
+        let pressure = 0;
+        let humidity = 0;
 
-        let temp1 = parseFloat(data[0].sensordatavalues[0].value);
-        let temp2 = parseFloat(data[1].sensordatavalues[0].value);
-        let temp = (temp1 + temp2) / 2;
-        console.log(temp.toFixed(2));
-        paraTemp.text(temp.toFixed(2));
+        // Calculating the sum of all values
+        for (var i = 0; i < data.length; i++) {
+            // console.log("i == " + i + ": " + parseFloat(data[i].sensordatavalues[0].value));
+            temperature += parseFloat(data[i].sensordatavalues[0].value);
+            pressure += parseFloat(data[i].sensordatavalues[1].value);
+            humidity += parseFloat(data[i].sensordatavalues[2].value);
+        }
 
-        let pressure1 = parseFloat(data[0].sensordatavalues[1].value);
-        let pressure2 = parseFloat(data[1].sensordatavalues[1].value);
-        let pressure = (pressure1 + pressure2) / 2;
-        console.log(pressure.toFixed(2));
+        // Calculating average values
+        temperature /= data.length;
+        pressure /= data.length * 100;
+        humidity /= data.length;
+
+        // Displaying the result
+        paraTemp.text(temperature.toFixed(2));
         paraPressure.text(pressure.toFixed(2));
-
-        let hum1 = parseFloat(data[0].sensordatavalues[2].value);
-        let hum2 = parseFloat(data[1].sensordatavalues[2].value);
-        let hum = (hum1 + hum2) / 2;
-        console.log(hum1.toFixed(2));
-        paraHum.text(hum1.toFixed(2));
+        paraHum.text(humidity.toFixed(2));
 
     });
 
@@ -86,16 +90,15 @@ $(function() {
 
         console.log(data);
 
-        let PM11 = parseFloat(data[0].sensordatavalues[0].value);
-        let PM12 = parseFloat(data[1].sensordatavalues[0].value);
-        let PM10 = (PM11 + PM12) / 2;
-        console.log(PM10.toFixed(2));
-        paraPM11.text(PM10.toFixed(2));
+        let PM10 = 0;
+        let PM25 = 0;
 
-        let PM21 = parseFloat(data[0].sensordatavalues[1].value);
-        let PM22 = parseFloat(data[1].sensordatavalues[1].value);
-        let PM25 = (PM21 + PM22) / 2;
-        console.log(PM25.toFixed(2));
+        for (var i = 0; i < data.length; i++) {
+            PM10 += parseFloat(data[i].sensordatavalues[0].value);
+            PM25 += parseFloat(data[i].sensordatavalues[1].value);
+        }
+
+        paraPM11.text(PM10.toFixed(2));
         paraPM25.text(PM25.toFixed(2));
 
     });
@@ -106,7 +109,8 @@ function showdaily() {
     var x = document.getElementById("GraphsDaily");
     if (x.style.display === "none") {
         x.style.display = "block";
-        $("#buttongraphday").text("Hide daily graphs");
+        $("#buttongraphday")
+            .text("Hide daily graphs");
     } else {
         x.style.display = "none";
         $("#buttongraphday").text("Show daily graphs");
@@ -137,13 +141,4 @@ function showmonthly() {
         $("#buttongraphmonth").text("Show monthly graphs");
     }
 
-}
-
-function infoFunction() {
-    var x = document.getElementById("pminfo");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
 }
