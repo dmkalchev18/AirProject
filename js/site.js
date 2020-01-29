@@ -14,7 +14,7 @@ function initScenes(controller) {
     new ScrollMagic.Scene({
             triggerElement: "#trigger2",
             triggerHook: 1, // show, when scrolled 10% into view
-            duration: "123%", // hide 10% before exiting view (n% + 10% from bottom)
+            duration: "127%", // hide 10% before exiting view (n% + 10% from bottom)
             offset: 50 // move trigger to center of element
         })
         .setClassToggle("#reveal2", "visible") // add class to reveal
@@ -57,14 +57,18 @@ $(function() {
     let paraHum = $("#vHum");
     let paraPM11 = $('#vPM10');
     let paraPM25 = $('#vPM25');
+    let paraUpdate = $('#vUpdate');
 
 
 
     $.getJSON("http://data.sensor.community/airrohr/v1/sensor/38303/", function(data) {
 
+        let LastUpdate = 0;
         let temperature = 0;
         let pressure = 0;
         let humidity = 0;
+
+        LastUpdate = (data[0].timestamp);
 
         // Calculating the sum of all values
         for (var i = 0; i < data.length; i++) {
@@ -83,6 +87,7 @@ $(function() {
         paraTemp.text(temperature.toFixed(2));
         paraPressure.text(pressure.toFixed(2));
         paraHum.text(humidity.toFixed(2));
+        paraUpdate.text(LastUpdate);
 
     });
 
