@@ -39,7 +39,7 @@
                     </a>
                 </div>
                 <div class="Buttons" class="button_cont" align="center">
-                    <a href="#Stats" class="StatsButton" rel="nofollow">
+                    <a href="#stats" class="StatsButton" rel="nofollow">
                         <span>Statistics</span>
                     </a>
                 </div>
@@ -48,20 +48,21 @@
         </div>
     </div>
 
-    <center>
-        <div style="height:550px;background-color:white;font-size:36px">
+
+    <div style="height:380px;background-color:white;font-size:36px">
 
 
-            <div class="spacer s2"></div>
-            <div id="trigger1" class="spacer s0"></div>
-            <div id="reveal1" class="box2 blue">
-                <p>Welcome to our website about air quality!!!</p>
-            </div>
-            <div class="spacer s2"></div>
+        <div class="spacer s2"></div>
+        <div id="trigger1" class="spacer s0"></div>
+        <div id="reveal1" class="box2 blue">
+            <p>
+                <p>
+        </div>
+        <div class="spacer s2"></div>
 
-            <!-- /**********************************************************************************/ -->
+        <!-- /**********************************************************************************/ -->
 
-            <div id="Stats">
+        <!-- <div id="Stats">
                 <div id="trigger2" class="spacer s0"></div>
                 <div id="reveal2" class="box2 blue">
                     <p>Last updated: <span id="vUpdate">?</span></p>
@@ -71,19 +72,70 @@
                     <p>Currently the PM10 is <span id="vPM10">?</span> µg/m³</p>
                     <p>Currently the PM2.5 is <span id="vPM25">?</span> µg/m³</p>
                 </div>
-            </div>
-        </div>
+            </div> -->
 
+
+        <div id="content" class="container">
+            <div id="trigger2" class="spacer s0"></div>
+            <div id="reveal2" class="box2 blue">
+                <div class="stats" id="stats">
+                    <h5>Statistics:</h5>
+                    <table class="table">
+                        <tbody>
+
+                            <tr>
+                                <th>Temperature:</th>
+
+                                <td><span id="vTemp">?</span> &#8451;</td>
+
+                            </tr>
+
+                            <tr>
+                                <th>Pressure:</th>
+
+                                <td><span id="vPressure">?</span> hPa</td>
+
+                            </tr>
+                            <tr>
+                                <th>Humidity:</th>
+
+                                <td><span id="vHum">?</span> &percnt;</td>
+
+                            </tr>
+                            <tr>
+                                <th>Fine dust 10 µm:</th>
+
+                                <td><span id="vPM10">?</span> µg/m³</td>
+
+                            </tr>
+                            <tr>
+                                <th>Fine dust 2.5 µm:</th>
+
+                                <td><span id="vPM25">?</span> µg/m³</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <p class="last-updated">Last updated: <span id="vUpdate">?</span></p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <center>
         <!-- /********************************************************************************/ -->
 
-        <div id="Graphs">
+        <div id="Graphs ">
             <div class="GraphButtons">
                 <button class="dailybutton" id="buttongraphday" onclick="showdaily()">Show daily graphs</button>
                 <button class="weeklybutton" id="buttongraphweek" onclick="showweekly()">Show weekly graphs</button>
                 <button class="monthlybutton" id="buttongraphmonth" onclick="showmonthly()">Show monthly graphs</button>
             </div>
-            <div id="trigger3" class="spacer s0"></div>
-            <div id="reveal3" class="box2 blue">
+            <div id="trigger3 " class="spacer s0 "></div>
+            <div id="reveal3 " class="box2 blue ">
 
                 <!-- /********************************************************************************/ -->
 
@@ -97,16 +149,16 @@
 
                 <div id="GraphsWeekly" style="display:none">
                     <p>Weekly Graphs:</p>
-                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-week.png" alt="Weekly Graph (PM10)">
-                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-week.png" alt="Weekly Graph (PM2.5)">
+                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-week.png " alt="Weekly Graph (PM10)">
+                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-week.png " alt="Weekly Graph (PM2.5)">
                 </div>
 
                 <!-- /********************************************************************************/ -->
 
                 <div id="GraphsMonthly" style="display:none">
                     <p>Monthly Graphs:</p>
-                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-month.png" alt="Monthly Graph (PM10)">
-                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-month.png" alt="Montly Graph (PM2.5)">
+                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-month.png " alt="Monthly Graph (PM10)">
+                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-month.png " alt="Montly Graph (PM2.5)">
                 </div>
 
             </div>

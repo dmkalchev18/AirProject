@@ -21,14 +21,14 @@ function initScenes(controller) {
         .addTo(controller);
 
     // build scene
-    new ScrollMagic.Scene({
-            triggerElement: "#trigger3",
-            triggerHook: 1, // show, when scrolled 10% into view
-            duration: "220%", // hide 10% before exiting view (n% + 10% from bottom)
-            offset: 50 // move trigger to center of element
-        })
-        .setClassToggle("#reveal3", "visible") // add class to reveal
-        .addTo(controller);
+    // new ScrollMagic.Scene({
+    //         triggerElement: "#trigger3",
+    //         triggerHook: 1, // show, when scrolled 10% into view
+    //         duration: "220%", // hide 10% before exiting view (n% + 10% from bottom)
+    //         offset: 50 // move trigger to center of element
+    //     })
+    //     .setClassToggle("#reveal3", "visible") // add class to reveal
+    //     .addTo(controller);
 }
 
 

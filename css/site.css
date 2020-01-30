@@ -39,6 +39,7 @@ body,
 html {
     height: 100%;
     margin: 0px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif
 }
 
 html {
@@ -219,12 +220,10 @@ ul.infolist {
     padding-left: 23%;
 }
 
-div#reveal2 p {
-    border-top: 1px solid silver;
-}
-
-div#reveal2 {
-    width: 50%;
+.last-updated {
+    border-top: 2px solid silver;
+    margin-top: 5px;
+    padding-top: 4px;
 }
 
 .footnote {
@@ -238,4 +237,74 @@ div#reveal2 {
     padding: 1px;
     font-size: 8pt;
     color: silver;
+}
+
+#content.container {
+    margin-top: 20px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+*,
+ :after,
+ :before {
+    box-sizing: border-box;
+}
+
+user agent stylesheet div {
+    display: block;
+}
+
+.stats {
+    position: relative;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stats h5 {
+    margin: 0px;
+    margin-bottom: 8px;
+}
+
+.table {
+    color: #212529;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table {
+    display: table;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+.table td,
+.table th {
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+th {
+    text-align: inherit;
+    font-size: 21pt;
+}
+
+.table td {
+    font-size: 21pt;
+}
+
+.last-updated {
+    text-align: center;
+    color: gray;
+    font-size: 14pt;
 }
