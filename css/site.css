@@ -308,3 +308,8 @@ th {
     color: gray;
     font-size: 14pt;
 }
+
+iframe {
+    width: 60%;
+    height: 400px;
+}

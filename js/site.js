@@ -68,7 +68,7 @@ $(function() {
         let pressure = 0;
         let humidity = 0;
 
-        LastUpdate = (data[0].timestamp);
+        LastUpdate = data[0].timestamp;
 
         // Calculating the sum of all values
         for (var i = 0; i < data.length; i++) {
@@ -87,7 +87,7 @@ $(function() {
         paraTemp.text(temperature.toFixed(2));
         paraPressure.text(pressure.toFixed(2));
         paraHum.text(humidity.toFixed(2));
-        paraUpdate.text(LastUpdate);
+        paraUpdate.text(LastUpdate + " UTC");
 
     });
 
