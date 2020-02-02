@@ -127,9 +127,13 @@
     </div>
     <center>
 
-        <iframe src="https://maps.sensor.community/#16/42.4540/27.4008">
-            <p>Your browser does not support iframes.</p>
-          </iframe>
+        <div class="map">
+            <p>Sensor's location on the map:</p>
+            <iframe src="https://maps.sensor.community/#16/42.4540/27.4008">
+                <p>Your browser does not support iframes.</p>
+            </iframe>
+        </div>
+
 
         <!-- /********************************************************************************/ -->
 
@@ -177,6 +181,9 @@
             <p>More Information</p>
         </center>
         <div id="accordion">
+
+            <!-- Section 1 -->
+
             <h3>What's the difference between PM10 and PM2.5</h3>
             <div>
                 <ul class="infolist">
@@ -186,6 +193,9 @@
                     <li>Particulate pollution does not include gas pollutants like ozone and NO2.</li>
                 </ul>
             </div>
+
+            <!-- Section 2 -->
+
             <h3>What are the norms for PM10 and PM2.5</h3>
             <div>
                 PM10:
@@ -202,10 +212,47 @@
                     <p id="fnAYR">2. AYR - Average yearly rate</p>
                 </div>
             </div>
+
+            <!-- Section 3 -->
+
             <h3>The impact of polluted air on human health</h3>
             <div>
                 The dust enters the body mainly through the respiratory system, whereby the larger particles are retained in the upper respiratory tract and the finer particles reach the lower parts of the respiratory system, leading to tissue damage in the lung.
             </div>
+
+            <!-- Section 4 -->
+
+            <h3>How much electricity the station consumes</h3>
+            <div>
+                <ul class="infolist">
+                    <li>
+                        1W x 24 hours x 365 days / 1000 = 8.76 kWh or approximately 8.76kW x 0.22 BGN / kWh = 1.92 BGN a year.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Section 5 -->
+
+            <h3>How much WiFi internet traffic goes to the station</h3>
+            <div>
+                <ul class="infolist">
+                    <li>
+                        The ESP8266 controller sends very little data in text format (sensor ID, time and hour, and 4 sensor data types), up to a few megabytes a year.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Section 6 -->
+
+            <h3>Why the station needs to be constantly connected to WiFi</h3>
+            <div>
+                <ul class="infolist">
+                    <li>
+                        WiFi should be turned on with a real internet connection at all times because the NodeMCU ESP8266, CPU / WLAN has no RAM. If you turn off the WiFi connection, your station data will not be transmitted, displayed and saved.
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </div>
 </body>

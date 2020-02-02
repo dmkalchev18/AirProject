@@ -313,3 +313,12 @@ iframe {
     width: 60%;
     height: 400px;
 }
+
+.map {
+    padding-bottom: 30px;
+}
+
+.map p {
+    font-size: 20pt;
+    margin-bottom: 5px;
+}

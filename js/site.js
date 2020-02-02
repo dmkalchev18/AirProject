@@ -98,6 +98,7 @@ $(function() {
         let PM10 = 0;
         let PM25 = 0;
 
+        // Calculating the sum of all values
         for (var i = 0; i < data.length; i++) {
             PM10 += parseFloat(data[i].sensordatavalues[0].value);
             PM25 += parseFloat(data[i].sensordatavalues[1].value);
