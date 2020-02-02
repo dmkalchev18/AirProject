@@ -204,9 +204,9 @@ a:link {
     margin-top: 50px;
 }
 
-.moreinfo p{
-    padding-top:25px;
-    font-size:20pt;
+.moreinfo p {
+    padding-top: 25px;
+    font-size: 25pt;
 }
 
 ul.infolist li::before {
@@ -316,14 +316,14 @@ th {
 
 iframe {
     width: 60%;
-    height: 400px;
+    height: 500px;
 }
 
 .map {
-    padding-bottom: 30px;
+    padding-bottom: 75px;
 }
 
 .map p {
-    font-size: 20pt;
-    margin-bottom: 5px;
+    font-size: 25pt;
+    margin-bottom: 10px;
 }
