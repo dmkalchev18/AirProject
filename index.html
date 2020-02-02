@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/site.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js'></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/site.js"></script>
@@ -87,43 +87,38 @@
                                 <th>Temperature:</th>
 
                                 <td><span id="vTemp">?</span> &#8451;</td>
-
                             </tr>
 
                             <tr>
                                 <th>Pressure:</th>
 
                                 <td><span id="vPressure">?</span> hPa</td>
-
                             </tr>
+
                             <tr>
                                 <th>Humidity:</th>
 
                                 <td><span id="vHum">?</span> &percnt;</td>
-
                             </tr>
+
                             <tr>
                                 <th>Fine dust 10 µm:</th>
 
                                 <td><span id="vPM10">?</span> µg/m³</td>
-
                             </tr>
+
                             <tr>
                                 <th>Fine dust 2.5 µm:</th>
 
                                 <td><span id="vPM25">?</span> µg/m³</td>
-
                             </tr>
 
                         </tbody>
                     </table>
                     <p class="last-updated">Last updated: <span id="vUpdate">?</span></p>
                 </div>
-
             </div>
-
         </div>
-    </div>
     </div>
     <center>
 
@@ -137,14 +132,14 @@
 
         <!-- /********************************************************************************/ -->
 
-        <div id="Graphs ">
+        <div id="Graphs">
             <div class="GraphButtons">
                 <button class="dailybutton" id="buttongraphday" onclick="showdaily()">Show daily graphs</button>
                 <button class="weeklybutton" id="buttongraphweek" onclick="showweekly()">Show weekly graphs</button>
                 <button class="monthlybutton" id="buttongraphmonth" onclick="showmonthly()">Show monthly graphs</button>
             </div>
-            <div id="trigger3 " class="spacer s0 "></div>
-            <div id="reveal3 " class="box2 blue ">
+            <div id="trigger3" class="spacer s0"></div>
+            <div id="reveal3" class="box2 blue">
 
                 <!-- /********************************************************************************/ -->
 
@@ -158,16 +153,16 @@
 
                 <div id="GraphsWeekly" style="display:none">
                     <p>Weekly Graphs:</p>
-                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-week.png " alt="Weekly Graph (PM10)">
-                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-week.png " alt="Weekly Graph (PM2.5)">
+                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-week.png" alt="Weekly Graph (PM10)">
+                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-week.png" alt="Weekly Graph (PM2.5)">
                 </div>
 
                 <!-- /********************************************************************************/ -->
 
                 <div id="GraphsMonthly" style="display:none">
                     <p>Monthly Graphs:</p>
-                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-month.png " alt="Monthly Graph (PM10)">
-                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-month.png " alt="Montly Graph (PM2.5)">
+                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-month.png" alt="Monthly Graph (PM10)">
+                    <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-month.png" alt="Montly Graph (PM2.5)">
                 </div>
 
             </div>

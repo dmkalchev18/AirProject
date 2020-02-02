@@ -21,14 +21,14 @@ function initScenes(controller) {
         .addTo(controller);
 
     // build scene
-    // new ScrollMagic.Scene({
-    //         triggerElement: "#trigger3",
-    //         triggerHook: 1, // show, when scrolled 10% into view
-    //         duration: "220%", // hide 10% before exiting view (n% + 10% from bottom)
-    //         offset: 50 // move trigger to center of element
-    //     })
-    //     .setClassToggle("#reveal3", "visible") // add class to reveal
-    //     .addTo(controller);
+    new ScrollMagic.Scene({
+            triggerElement: "#trigger3",
+            triggerHook: 1, // show, when scrolled 10% into view
+            duration: "220%", // hide 10% before exiting view (n% + 10% from bottom)
+            offset: 50 // move trigger to center of element
+        })
+        .setClassToggle("#reveal3", "visible") // add class to reveal
+        .addTo(controller);
 }
 
 
@@ -59,16 +59,24 @@ $(function() {
     let paraPM25 = $('#vPM25');
     let paraUpdate = $('#vUpdate');
 
+    function dateToISOLocalDate(date) {
+        const offsetMs = date.getTimezoneOffset() * 60 * 1000;
+        const msLocal = date.getTime() - offsetMs;
+        const dateLocal = new Date(msLocal);
+        const iso = dateLocal.toISOString();
+        let isoLocal = iso.slice(0, 19);
+        isoLocal = isoLocal.replace('T', ' ');
+        return isoLocal;
+    }
 
-
-    $.getJSON("http://data.sensor.community/airrohr/v1/sensor/38303/", function(data) {
+    $.getJSON("https://data.sensor.community/airrohr/v1/sensor/38303/", function(data) {
 
         let LastUpdate = 0;
         let temperature = 0;
         let pressure = 0;
         let humidity = 0;
 
-        LastUpdate = data[0].timestamp;
+        LastUpdate = dateToISOLocalDate(new Date(data[0].timestamp + "Z"));
 
         // Calculating the sum of all values
         for (var i = 0; i < data.length; i++) {
@@ -87,11 +95,11 @@ $(function() {
         paraTemp.text(temperature.toFixed(2));
         paraPressure.text(pressure.toFixed(2));
         paraHum.text(humidity.toFixed(2));
-        paraUpdate.text(LastUpdate + " UTC");
+        paraUpdate.text(LastUpdate);
 
     });
 
-    $.getJSON("http://data.sensor.community/airrohr/v1/sensor/38302/", function(data) {
+    $.getJSON("https://data.sensor.community/airrohr/v1/sensor/38302/", function(data) {
 
         console.log(data);
 
