@@ -71,6 +71,10 @@ $(function() {
 
     $.getJSON("https://data.sensor.community/airrohr/v1/sensor/38303/", function(data) {
 
+        if (data.length == 0) {
+            return;
+        }
+
         let LastUpdate = 0;
         let temperature = 0;
         let pressure = 0;
@@ -101,7 +105,9 @@ $(function() {
 
     $.getJSON("https://data.sensor.community/airrohr/v1/sensor/38302/", function(data) {
 
-        console.log(data);
+        if (data.length == 0) {
+            return;
+        }
 
         let PM10 = 0;
         let PM25 = 0;
