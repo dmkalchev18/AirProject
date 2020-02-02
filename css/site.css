@@ -204,6 +204,11 @@ a:link {
     margin-top: 50px;
 }
 
+.moreinfo p{
+    padding-top:25px;
+    font-size:20pt;
+}
+
 ul.infolist li::before {
     content: "- ";
 }
