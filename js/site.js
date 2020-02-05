@@ -4,7 +4,7 @@ function initScenes(controller) {
     new ScrollMagic.Scene({
             triggerElement: "#trigger1",
             triggerHook: 1, // show, when scrolled 10% into view
-            duration: "117%", // hide 10% before exiting view (n% + 10% from bottom)
+            duration: "100%", // hide 10% before exiting view (n% + 10% from bottom)
             offset: 50 // move trigger to center of element
         })
         .setClassToggle("#reveal1", "visible") // add class to reveal
@@ -14,7 +14,7 @@ function initScenes(controller) {
     new ScrollMagic.Scene({
             triggerElement: "#trigger2",
             triggerHook: 1, // show, when scrolled 10% into view
-            duration: "127%", // hide 10% before exiting view (n% + 10% from bottom)
+            duration: "120%", // hide 10% before exiting view (n% + 10% from bottom)
             offset: 50 // move trigger to center of element
         })
         .setClassToggle("#reveal2", "visible") // add class to reveal
@@ -55,7 +55,7 @@ $(function() {
     let paraTemp = $("#vTemp");
     let paraPressure = $("#vPressure");
     let paraHum = $("#vHum");
-    let paraPM11 = $('#vPM10');
+    let paraPM10 = $('#vPM10');
     let paraPM25 = $('#vPM25');
     let paraUpdate = $('#vUpdate');
 
@@ -105,6 +105,7 @@ $(function() {
 
     $.getJSON("https://data.sensor.community/airrohr/v1/sensor/38302/", function(data) {
 
+        // After receiving a response we perform data validateion check
         if (data.length == 0) {
             return;
         }
@@ -118,8 +119,12 @@ $(function() {
             PM25 += parseFloat(data[i].sensordatavalues[1].value);
         }
 
+        // Calculating average values
+        PM10 /= data.length;
+        PM25 /= data.length;
+
         // Displaying the result
-        paraPM11.text(PM10.toFixed(2));
+        paraPM10.text(PM10.toFixed(2));
         paraPM25.text(PM25.toFixed(2));
 
     });
