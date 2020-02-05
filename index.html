@@ -49,14 +49,19 @@
     </div>
 
 
-    <div style="height:320px;background-color:white;font-size:36px">
+    <div style="height:550px;background-color:white;font-size:36px">
 
 
         <div class="spacer s2"></div>
         <div id="trigger1" class="spacer s0"></div>
         <div id="reveal1" class="box2 blue">
-            <p>
-                <p>
+            <center>
+                <div class="about">
+                    <p>Welcome in our site!</p>
+                    <p>Here you can see the ambient air quality with the help of our sensor.</p>
+                    <p>We have statistics, graphs and curious information.</p>
+                </div>
+            </center>
         </div>
         <div class="spacer s2"></div>
 
@@ -74,6 +79,7 @@
                 </div>
             </div> -->
 
+        <!-- Statistics -->
 
         <div id="content" class="container">
             <div id="trigger2" class="spacer s0"></div>
@@ -130,7 +136,7 @@
         </div>
 
 
-        <!-- /********************************************************************************/ -->
+        <!-- Graphs -->
 
         <div id="Graphs">
             <div class="GraphButtons">
@@ -141,7 +147,7 @@
             <div id="trigger3" class="spacer s0"></div>
             <div id="reveal3" class="box2 blue">
 
-                <!-- /********************************************************************************/ -->
+                <!-- Daily graphs -->
 
                 <div id="GraphsDaily" style="display:none">
                     <p>Daily Graphs:</p>
@@ -149,7 +155,7 @@
                     <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-day.png" alt="Daily Graph (PM2.5)">
                 </div>
 
-                <!-- /********************************************************************************/ -->
+                <!-- Weekly graphs -->
 
                 <div id="GraphsWeekly" style="display:none">
                     <p>Weekly Graphs:</p>
@@ -157,7 +163,7 @@
                     <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-week.png" alt="Weekly Graph (PM2.5)">
                 </div>
 
-                <!-- /********************************************************************************/ -->
+                <!-- Monthly graphs -->
 
                 <div id="GraphsMonthly" style="display:none">
                     <p>Monthly Graphs:</p>
@@ -169,7 +175,7 @@
         </div>
     </center>
 
-    <!-- /********************************************************************************/ -->
+    <!-- More information section -->
 
     <div class="moreinfo" id="Info">
         <center>
@@ -279,19 +285,20 @@
 
             <h3>What sensors and controllers are used</h3>
             <div>
+                The components are:
                 <ul class="infolist">
                     <li>
                         NodeMCU ESP8266 controller, CPU / WLAN.
                     </li>
                     <li>
-                        FP <a href="#fnFP">[1]</a> sensor SDS011 NOVA PM.
+                        FDP <a href="#fnFP">[1]</a> sensor SDS011 NOVA PM.
                     </li>
                     <li>
                         Sensor for atmospheric pressure, temperature and humidity BME280.
                     </li>
                 </ul>
                 <div class="footnote">
-                    <p id="fnFP">1. FP - Fine particle</p>
+                    <p id="fnFP">1. FP - Fine dust particle</p>
                 </div>
             </div>
         </div>

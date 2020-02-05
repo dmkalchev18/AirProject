@@ -118,6 +118,7 @@ $(function() {
             PM25 += parseFloat(data[i].sensordatavalues[1].value);
         }
 
+        // Displaying the result
         paraPM11.text(PM10.toFixed(2));
         paraPM25.text(PM25.toFixed(2));
 

@@ -155,6 +155,18 @@ a:link {
 }
 
 
+/* About Information */
+
+.about {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.about p {
+    margin: 0px;
+}
+
+
 /* Graph buttons */
 
 .dailybutton,
