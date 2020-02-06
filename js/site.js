@@ -32,16 +32,19 @@ function initScenes(controller) {
 }
 
 
-
+//  define a JQuery function that will be executed when the whole body is loaded
 $(function() {
 
+    // selection all the elements that have id="accordion"
     $("#accordion").accordion({
         active: false,
         collapsible: true,
         heightStyle: "content"
     });
 
+    // select all 'a' atributes that contain in their href '#'
     $('a[href*="#"]').on('click', function(e) {
+
         // Prevent event bubling (i.e. the browser will not add #element_id in address bar)
         e.preventDefault();
 
@@ -59,6 +62,7 @@ $(function() {
     let paraPM25 = $('#vPM25');
     let paraUpdate = $('#vUpdate');
 
+    // converting the time to local time 
     function dateToISOLocalDate(date) {
         const offsetMs = date.getTimezoneOffset() * 60 * 1000;
         const msLocal = date.getTime() - offsetMs;
@@ -69,8 +73,10 @@ $(function() {
         return isoLocal;
     }
 
+    // using JSON method to take the data
     $.getJSON("https://data.sensor.community/airrohr/v1/sensor/38303/", function(data) {
 
+        // check if the data is valid
         if (data.length == 0) {
             return;
         }
@@ -133,6 +139,8 @@ $(function() {
 
 function showdaily() {
     var x = document.getElementById("GraphsDaily");
+
+    // if display attribute has value = None, then we change it and make it a block element
     if (x.style.display === "none") {
         x.style.display = "block";
         $("#buttongraphday")
