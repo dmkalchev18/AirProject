@@ -167,6 +167,12 @@ a:link {
     font-size: 23pt;
 }
 
+.bodyheight {
+    height: 550px;
+    background-color: white;
+    font-size: 36px
+}
+
 
 /* Graph buttons */
 
