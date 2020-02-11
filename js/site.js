@@ -42,6 +42,12 @@ $(function() {
         heightStyle: "content"
     });
 
+    $("#accordion2").accordion({
+        active: false,
+        collapsible: true,
+        heightStyle: "content"
+    });
+
     // select all 'a' atributes that contain in their href '#'
     $('a[href*="#"]').on('click', function(e) {
 

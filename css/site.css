@@ -164,6 +164,7 @@ a:link {
 
 .about p {
     margin: 0px;
+    font-size: 23pt;
 }
 
 
@@ -211,9 +212,15 @@ a:link {
     margin-top: 50px;
 }
 
-.moreinfo p {
+.moreinfo p,
+.aboutus p {
     padding-top: 25px;
     font-size: 25pt;
+}
+
+.aboutus {
+    font-size: 18px;
+    margin-top: 50px;
 }
 
 ul.infolist li::before {
@@ -226,10 +233,15 @@ ul.infolist {
     padding-bottom: 12px;
 }
 
-#accordion {
+#accordion,
+#accordion2 {
     padding-bottom: 86px;
     padding-right: 23%;
     padding-left: 23%;
+}
+
+.aboutinfo {
+    background-color: white;
 }
 
 .last-updated {
