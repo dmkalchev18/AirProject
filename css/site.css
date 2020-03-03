@@ -160,11 +160,8 @@ a:link {
 .about {
     padding-top: 30px;
     padding-bottom: 40px;
-}
-
-.about p {
     margin: 0px;
-    font-size: 23pt;
+    font-size: 20pt;
 }
 
 .bodyheight {
@@ -351,4 +348,17 @@ iframe {
 .map p {
     font-size: 25pt;
     margin-bottom: 10px;
+}
+
+.translate-button {
+    width: 33px;
+    height: 30px;
+}
+
+.translate-button.translate-bg {
+    background-image: url("../images/bg-flag.svg");
+}
+
+.translate-button.translate-en {
+    background-image: url("../images/en-flag.svg");
 }

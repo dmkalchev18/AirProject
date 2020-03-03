@@ -13,12 +13,16 @@
     <script type="text/javascript" src="js/site.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+    <script src="js/translation.js"></script>
 </head>
 
 <body>
 
     <div class="background">
+        <nav style="text-align: right;">
+            <button class="translate-button translate-bg" data-lng="bg"></button>
+            <button class="translate-button translate-en" data-lng="en"></button>
+        </nav>
         <div class="SiteLogo-wrapper">
             <div class="SiteLogo-container">
 
@@ -32,17 +36,17 @@
             <div class="actions-buttons">
                 <div class="Buttons" class="button_cont" align="center">
                     <a href="#Info" class="InfoButton" rel="nofollow">
-                        <span>More Information</span>
+                        <span data-lang="btn1">More Informatio</span>
                     </a>
                 </div>
                 <div class="Buttons" class="button_cont" align="center">
                     <a href="#Graphs" class="GraphButton" rel="nofollow">
-                        <span>Graphics</span>
+                        <span data-lang="btn2">Graphics</span>
                     </a>
                 </div>
                 <div class="Buttons" class="button_cont" align="center">
                     <a href="#stats" class="StatsButton" rel="nofollow">
-                        <span>Statistics</span>
+                        <span data-lang="btn3">Statistics</span>
                     </a>
                 </div>
 
@@ -55,12 +59,7 @@
         <div id="trigger1" class="spacer s0"></div>
         <div id="reveal1" class="box2 blue">
             <center>
-                <div class="about">
-                    <p>Welcome to our site!</p>
-                    <p>Here you can see the ambient air quality with the help of our sensor.</p>
-                    <p>Our main goal is to inform people living in the area and local authorities about the pollution of the air.</p>
-                    <p>We have statistics, map, graphs and curious information.</p>
-                </div>
+                <div class="about" data-lang="about"></div>
             </center>
         </div>
         <div class="spacer s2"></div>
@@ -73,43 +72,43 @@
             <div id="trigger2" class="spacer s0"></div>
             <div class="stats" id="stats">
                 <div id="reveal2" class="box2 blue">
-                    <h5>Statistics:</h5>
+                    <h5 data-lang="stats-title">Statistics:</h5>
                     <table class="table">
                         <tbody>
 
                             <tr>
-                                <th>Temperature:</th>
+                                <th data-lang="stats-temperature"></th>
 
                                 <td><span id="vTemp">?</span> &#8451;</td>
                             </tr>
 
                             <tr>
-                                <th>Pressure:</th>
+                                <th data-lang="stats-pressure"></th>
 
                                 <td><span id="vPressure">?</span> hPa</td>
                             </tr>
 
                             <tr>
-                                <th>Humidity:</th>
+                                <th data-lang="stats-humidity"></th>
 
                                 <td><span id="vHum">?</span> &percnt;</td>
                             </tr>
 
                             <tr>
-                                <th>Fine dust 10 µm:</th>
+                                <th data-lang="stats-PM10">:</th>
 
                                 <td><span id="vPM10">?</span> µg/m³</td>
                             </tr>
 
                             <tr>
-                                <th>Fine dust 2.5 µm:</th>
+                                <th data-lang="stats-PM2.5"></th>
 
                                 <td><span id="vPM25">?</span> µg/m³</td>
                             </tr>
 
                         </tbody>
                     </table>
-                    <p class="last-updated">Last updated: <span id="vUpdate">?</span></p>
+                    <p class="last-updated"><span data-lang="stats-lastUpdate"></span><span id="vUpdate">?</span></p>
                 </div>
             </div>
         </div>
@@ -117,9 +116,9 @@
     <center>
 
         <div class="map">
-            <p>Sensor's location on the map:</p>
+            <p data-lang="stats-location">Sensor's location on the map:</p>
             <iframe src="https://maps.sensor.community/#16/42.4540/27.4008">
-                <p>Your browser does not support iframes.</p>
+                <p data-lang="">Your browser does not support iframes.</p>
             </iframe>
         </div>
 
@@ -127,9 +126,9 @@
 
         <div id="Graphs">
             <div class="GraphButtons">
-                <button class="dailybutton" id="buttongraphday" onclick="showdaily()">Show daily graphs</button>
-                <button class="weeklybutton" id="buttongraphweek" onclick="showweekly()">Show weekly graphs</button>
-                <button class="monthlybutton" id="buttongraphmonth" onclick="showmonthly()">Show monthly graphs</button>
+                <button class="dailybutton" id="buttongraphday" onclick="showdaily()" data-lang="dailyGraphButton">hgfhfg</button>
+                <button class="weeklybutton" id="buttongraphweek" onclick="showweekly()" data-lang="weeklyGraphButton"></button>
+                <button class="monthlybutton" id="buttongraphmonth" onclick="showmonthly()" data-lang="monthlyGraphButton"></button>
             </div>
             <div id="trigger3" class="spacer s0"></div>
             <div id="reveal3" class="box2 blue">
@@ -137,7 +136,7 @@
                 <!-- Daily graphs -->
 
                 <div id="GraphsDaily" style="display:none">
-                    <p>Daily Graphs:</p>
+                    <p data-lang="dailyGraph"></p>
                     <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-day.png" alt="Daily Graph (PM10)">
                     <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-day.png" alt="Daily Graph (PM2.5)">
                 </div>
@@ -145,7 +144,7 @@
                 <!-- Weekly graphs -->
 
                 <div id="GraphsWeekly" style="display:none">
-                    <p>Weekly Graphs:</p>
+                    <p data-lang="weeklyGraph"></p>
                     <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-week.png" alt="Weekly Graph (PM10)">
                     <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-week.png" alt="Weekly Graph (PM2.5)">
                 </div>
@@ -153,7 +152,7 @@
                 <!-- Monthly graphs -->
 
                 <div id="GraphsMonthly" style="display:none">
-                    <p>Monthly Graphs:</p>
+                    <p data-lang="monthlyGraph"></p>
                     <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-1-month.png" alt="Monthly Graph (PM10)">
                     <img src="https://www.madavi.de/sensor/images/sensor-esp8266-16625271-sds011-25-month.png" alt="Montly Graph (PM2.5)">
                 </div>
@@ -166,157 +165,74 @@
 
     <div class="moreinfo" id="Info">
         <center>
-            <p>Frequently asked questions (FAQ)</p>
+            <p data-lang="FAQ"></p>
         </center>
         <div id="accordion">
 
             <!-- Section 1 -->
 
-            <h3>What's the difference between PM10 and PM2.5</h3>
-            <div>
-                <ul class="infolist">
-                    <li>The “10” and the “2.5” refer to micrometers.</li>
-                    <li>PM10 is particles 10 microns and below.</li>
-                    <li>PM2.5 is particles 2.5 microns and below. (That means PM10 includes PM2.5.) </li>
-                    <li>Particulate pollution does not include gas pollutants like ozone and NO2.</li>
-                </ul>
-            </div>
+            <h3 data-lang="info-title-1">What's the difference between PM10 and PM2.5</h3>
+            <div data-lang="info-body-1"></div>
 
             <!-- Section 2 -->
 
-            <h3>What are the norms for PM10 and PM2.5</h3>
-            <div>
-                PM10:
-                <ul class="infolist">
-                    <li>ADR <a href="#fnADR">[1]</a> - 50 µg/m³ (not to be exceeded more than 35 times a year)</li>
-                    <li>AYR <a href="#fnAYR">[2]</a> - 40 µg/m³</li>
-                </ul>
-                PM2.5:
-                <ul class="infolist">
-                    <li>AYR - 25 µg/m³</li>
-                </ul>
-                <div class="footnote">
-                    <p id="fnADR">1. ADR - Average daily rate</p>
-                    <p id="fnAYR">2. AYR - Average yearly rate</p>
-                </div>
-            </div>
+            <h3 data-lang="info-title-2"></h3>
+            <div data-lang="info-body-2"></div>
 
             <!-- Section 3 -->
 
-            <h3>The impact of polluted air on human health</h3>
-            <div>
-                The dust enters the body mainly through the respiratory system, whereby the larger particles are retained in the upper respiratory tract and the finer particles reach the lower parts of the respiratory system, leading to tissue damage in the lung.
-            </div>
+            <h3 data-lang="info-title-3">The impact of polluted air on human health</h3>
+            <div data-lang="info-body-3"></div>
 
             <!-- Section 4 -->
 
-            <h3>How much electricity the station consumes</h3>
-            <div>
-                <ul class="infolist">
-                    <li>
-                        1W x 24 hours x 365 days / 1000 = 8.76 kWh or approximately 8.76kW x 0.22 BGN / kWh = 1.92 BGN a year.
-                    </li>
-                </ul>
-            </div>
+            <h3 data-lang="info-title-4">How much electricity the station consumes</h3>
+            <div data-lang="info-body-4"></div>
 
             <!-- Section 5 -->
 
-            <h3>How much WiFi internet traffic goes to the station</h3>
-            <div>
-                <ul class="infolist">
-                    <li>
-                        The ESP8266 controller sends very little data in text format (sensor ID, time and hour, and 4 sensor data types), up to a few megabytes a year.
-                    </li>
-                </ul>
-            </div>
+            <h3 data-lang="info-title-5">How much WiFi internet traffic goes to the station</h3>
+            <div data-lang="info-body-5"></div>
 
             <!-- Section 6 -->
 
-            <h3>Why the station needs to be constantly connected to WiFi</h3>
-            <div>
-                <ul class="infolist">
-                    <li>
-                        WiFi should be turned on with a real internet connection at all times because the NodeMCU ESP8266, CPU / WLAN has no RAM. If you turn off the WiFi connection, your station data will not be transmitted, displayed and saved.
-                    </li>
-                </ul>
-            </div>
+            <h3 data-lang="info-title-6">Why the station needs to be constantly connected to WiFi</h3>
+            <div data-lang="info-body-6"></div>
 
             <!-- Section 7 -->
 
-            <h3>How to mount a sensor</h3>
-            <div>
-                Make sure the station:
-                <ul class="infolist">
-                    <li>
-                        Is fixed and stable.
-                    </li>
-                    <li>
-                        Not installed indoors.
-                    </li>
-                    <li>
-                        Not exposed to direct sunlight.
-                    </li>
-                    <li>
-                        It is not on the inside of the balcony and there is sufficient free space below it.
-                    </li>
-                    <li>
-                        Do not smoke near, do not prepare short cuts.
-                    </li>
-                    <li>
-                        No incidental household contaminants are present.
-                    </li>
-                </ul>
-            </div>
+            <h3 data-lang="info-title-7">How to mount a sensor</h3>
+            <div data-lang="info-body-7"></div>
 
             <!-- Section 8 -->
 
-            <h3>What sensors and controllers are used</h3>
-            <div>
-                The components are:
-                <ul class="infolist">
-                    <li>
-                        NodeMCU ESP8266 controller, CPU / WLAN.
-                    </li>
-                    <li>
-                        FDP <a href="#fnFP">[1]</a> sensor SDS011 NOVA PM.
-                    </li>
-                    <li>
-                        Sensor for atmospheric pressure, temperature and humidity BME280.
-                    </li>
-                </ul>
-                <div class="footnote">
-                    <p id="fnFP">1. FDP - Fine dust particle</p>
-                </div>
+            <h3 data-lang="info-title-8">What sensors and controllers are used</h3>
+            <div data-lang="info-body-8">
+
             </div>
         </div>
     </div>
 
     <div class="aboutus" id="aboutinfo">
         <center>
-            <p>About the team</p>
+            <p data-lang="aboutUS"></p>
         </center>
         <div id="accordion2">
 
             <!-- Manager Info -->
 
-            <h3>Aleksander Patrashkov - The manager</h3>
-            <div>
-                He managed us and assisted in assembling the sensor. Also participated in the building of the site and creating the documentation and the presentation.
-            </div>
+            <h3 data-lang="manager"></h3>
+            <div data-lang="managerInfo"></div>
 
             <!-- Developer Info -->
 
-            <h3>Dimitar Kalchev - The developer</h3>
-            <div>
-                He worked on the site and in assembling the sensor. Also participated in creating the documentation and the presentation.
-            </div>
+            <h3 data-lang="developer"></h3>
+            <div data-lang="developerInfo"></div>
 
             <!-- Designer Info -->
 
-            <h3>Georgi Kalchev - The designer</h3>
-            <div>
-                He worked on the design of the site and in assembling the sensor. Also participated in creating the documentation and the presentation.
-            </div>
+            <h3 data-lang="designer"></h3>
+            <div data-lang="designerInfo"></div>
 
         </div>
     </div>

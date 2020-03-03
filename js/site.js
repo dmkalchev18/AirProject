@@ -35,6 +35,15 @@ function initScenes(controller) {
 //  define a JQuery function that will be executed when the whole body is loaded
 $(function() {
 
+    translate("bg");
+
+    $(".translate-button").on("click", function() {
+        translate($(this).data("lng"));
+    });
+
+
+
+
     // selection all the elements that have id="accordion"
     $("#accordion").accordion({
         active: false,
@@ -145,15 +154,14 @@ $(function() {
 
 function showdaily() {
     var x = document.getElementById("GraphsDaily");
-
     // if display attribute has value = None, then we change it and make it a block element
     if (x.style.display === "none") {
         x.style.display = "block";
         $("#buttongraphday")
-            .text("Hide daily graphs");
+            .text(getTranslatedText("dailyGraphButton-hide"));
     } else {
         x.style.display = "none";
-        $("#buttongraphday").text("Show daily graphs");
+        $("#buttongraphday").text(getTranslatedText("dailyGraphButton-show"));
     }
 
 }
@@ -163,10 +171,11 @@ function showweekly() {
 
     if (x.style.display === "none") {
         x.style.display = "block";
-        $("#buttongraphweek").text("Hide weekly graphs");
+        $("#buttongraphweek").text(getTranslatedText("weeklyGraphButton-hide"));
+
     } else {
         x.style.display = "none";
-        $("#buttongraphweek").text("Show weekly graphs");
+        $("#buttongraphweek").text(getTranslatedText("weeklyGraphButton-show"));
     }
 
 }
@@ -175,10 +184,10 @@ function showmonthly() {
     var x = document.getElementById("GraphsMonthly");
     if (x.style.display === "none") {
         x.style.display = "block";
-        $("#buttongraphmonth").text("Hide monthly graphs");
+        $("#buttongraphmonth").text(getTranslatedText("monthlyGraphButton-hide"));
     } else {
         x.style.display = "none";
-        $("#buttongraphmonth").text("Show monthly graphs");
+        $("#buttongraphmonth").text(getTranslatedText("monthlyGraphButton-show"));
     }
 
 }
