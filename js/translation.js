@@ -387,12 +387,6 @@ var textTranslation = {
         "en": `About the team
               `
     },
-    "manager": {
-        "bg": `Александър Патрашков - Мениджерът
-              `,
-        "en": `Aleksander Patrashkov - The manager
-              `
-    },
     "developer": {
         "bg": `Димитър Калчев - Разработчикът
                `,
@@ -404,13 +398,6 @@ var textTranslation = {
                `,
         "en": `Georgi Kalchev - The designer
                `
-    },
-    "managerInfo": {
-        "bg": `Той ни управлява и подпомага сглобяването на сензора. Също така участва в изграждането на сайта и създаването на документацията и презентацията.
-                `,
-        "en": `He managed us and assisted in assembling the sensor. Also participated in the building of the site and creating the documentation and the presentation.
-                `
-
     },
     "developerInfo": {
         "bg": `Работи над сайта и участва при сглобяването на сензора. Също така създаването на документацията и презентацията.
