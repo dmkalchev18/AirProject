@@ -242,7 +242,7 @@ var textTranslation = {
         `
     },
     "info-title-5": {
-        "bg": `Колко интернет се използва от станцията
+        "bg": `Колко Интернет се използва от станцията
               `,
         "en": `How much internet traffic goes to the station
               `
@@ -263,7 +263,7 @@ var textTranslation = {
         `
     },
     "info-title-6": {
-        "bg": `Защо станцията трябва да бъде постоянно свързана към интернет
+        "bg": `Защо станцията трябва да бъде постоянно свързана към Интернет
               `,
         "en": `Why the station needs to be constantly connected to WiFi
               `
