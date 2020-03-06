@@ -190,7 +190,7 @@ var textTranslation = {
         </ul>
         <div class="footnote">
             <p id="fnADR">1. СДС - Средна дневна стойност</p>
-            <p id="fnAYR">2. СФС - Средна годишна стойност</p>
+            <p id="fnAYR">2. СГС - Средна годишна стойност</p>
         </div>
 
             `,
